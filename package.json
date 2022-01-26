@@ -1,7 +1,7 @@
 {
-  "name": "craftzdog-homepage",
+  "name": "henarado",
   "version": "1.0.0",
-  "description": "Takuya's website",
+  "description": "Hena & Rado website",
   "scripts": {
     "dev": "next dev -H 0.0.0.0 -p 5000",
     "build": "next build",
@@ -11,7 +11,7 @@
     "lint": "next lint"
   },
   "keywords": [],
-  "author": "Takuya Matsuyama",
+  "author": "Radoslav Tomas",
   "license": "MIT",
   "dependencies": {
     "@chakra-ui/icons": "^1.1.1",

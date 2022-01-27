@@ -87,6 +87,17 @@ const Home = () => (
         </Box> */}
       </Section>
 
+      <Section delay={0.1}>
+        <Heading as="h3" variant="section-title">
+          Venue
+        </Heading>
+        <Paragraph>
+          Vavrisovo, Slovakia
+        </Paragraph>
+        <Paragraph>
+          In the middle of nowhere. But it's beautiful there! Trust us!
+        </Paragraph>
+      </Section>
       {/* <Section delay={0.2}>
         <Heading as="h3" variant="section-title">
           Bio

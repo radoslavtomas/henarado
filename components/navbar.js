@@ -93,6 +93,14 @@ const Navbar = props => {
         </Stack>
 
         <Box flex={1} align="right">
+          <Box>
+          <NextLink href="/" locale="en">
+            <a>En</a>
+          </NextLink>
+          <NextLink href="/" locale="sk">
+            <a>Sk</a>
+          </NextLink>
+          </Box>
           <ThemeToggleButton />
 
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>

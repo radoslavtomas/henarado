@@ -1,8 +1,9 @@
 module.exports = {
   reactStrictMode: true,
   swcMinify: true,
-  // images: {
-  //   loader: 'imgix',
-  //   path: 'https://henarado.com/',
-  // },
+  i18n: {
+    locales: ['en', 'sk'],
+    defaultLocale: 'en',
+    localeDetection: true,
+  },
 }

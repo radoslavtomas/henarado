@@ -22,15 +22,24 @@ import { GridItem } from '../components/grid-item'
 import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
 // import thumbYouTube from '../public/images/links/youtube.png'
 // import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
+import { useRouter } from 'next/router'
+import { en } from '../locales/en'
+import { sk } from '../locales/sk'
 
-const Home = () => (
+
+const Home = () => {
+
+  const { locale } = useRouter()
+  const t = locale === 'en' ? en : sk
+  
+  return (
   <Layout>
     <Container maxW="container.md">
       <Box display={{ md: 'flex' }} mb={6}>
         <Box flexGrow={1}>
           <Center>
             <Heading as="h2" variant="page-title">
-              Our Wedding
+            {t.title}
             </Heading>
           </Center>
           <Center>
@@ -54,7 +63,7 @@ const Home = () => (
             alt="Profile image"
           />
         </Box> */}
-      </Box>
+      </Box> 
 
       {/* <Section delay={0.1}>
         <Heading as="h3" variant="section-title">
@@ -216,6 +225,6 @@ const Home = () => (
       </Section> */}
     </Container>
   </Layout>
-)
+)}
 
 export default Home

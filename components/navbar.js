@@ -25,8 +25,9 @@ const LinkItem = ({ href, path, _target, children, ...props }) => {
     <NextLink href={href} passHref>
       <Link
         p={2}
-        bg={active ? 'grassTeal' : undefined}
-        color={active ? '#202023' : inactiveColor}
+        bg={active ? 'purple.600' : undefined}
+        color={active ? 'white' : inactiveColor}
+        borderRadius="md"
         _target={_target}
         {...props}
       >
@@ -71,13 +72,13 @@ const Navbar = props => {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
-          <LinkItem href="/more" path={path}>
+          {/* <LinkItem href="/more" path={path}>
             More
+          </LinkItem> */}
+          <LinkItem href="/venue" path={path}>
+            Venue
           </LinkItem>
-          {/* <LinkItem href="/posts" path={path}>
-            Posts
-          </LinkItem>
-          <LinkItem
+          {/* <LinkItem
             _target="_blank"
             href="https://github.com/craftzdog/craftzdog-homepage"
             path={path}

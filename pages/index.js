@@ -1,6 +1,7 @@
 import NextLink from 'next/link'
 import {
   Link,
+  Center,
   Container,
   Heading,
   Box,
@@ -24,23 +25,17 @@ import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
 
 const Home = () => (
   <Layout>
-    <Container>
-      <Box
-        borderRadius="lg"
-        mb={6}
-        p={3}
-        textAlign="center"
-        bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
-      >
-        Hena & Rado
-      </Box>
-
-      <Box display={{ md: 'flex' }}>
+    <Container maxW="container.md">
+      <Box display={{ md: 'flex' }} mb={6}>
         <Box flexGrow={1}>
-          <Heading as="h2" variant="page-title">
-            Wedding page
-          </Heading>
-          <p>All the things you (don't) want to know.</p>
+          <Center>
+            <Heading as="h2" variant="page-title">
+              Our Wedding
+            </Heading>
+          </Center>
+          <Center>
+            <p>All the things you (don't) want to know.</p>
+          </Center>
         </Box>
         {/* <Box
           flexShrink={0}
@@ -61,13 +56,13 @@ const Home = () => (
         </Box> */}
       </Box>
 
-      <Section delay={0.1}>
+      {/* <Section delay={0.1}>
         <Heading as="h3" variant="section-title">
           Date
         </Heading>
         <Paragraph>
           Yes, it will happen. For now just remember 13th August 2022.
-          {/* Takuya is a freelance and a full-stack developer based in Osaka with a
+          Takuya is a freelance and a full-stack developer based in Osaka with a
           passion for building digital services/stuff he wants. He has a knack
           for all things launching products, from planning and designing all the
           way to solving real-life problems with code. When not online, he loves
@@ -76,28 +71,32 @@ const Home = () => (
           <NextLink href="/works/inkdrop">
             <Link>Inkdrop</Link>
           </NextLink>
-          . */}
         </Paragraph>
-        {/* <Box align="center" my={4}>
+        <Box align="center" my={4}>
           <NextLink href="/works">
             <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
               My portfolio
             </Button>
           </NextLink>
-        </Box> */}
-      </Section>
+        </Box>
+      </Section> */}
+
 
       <Section delay={0.1}>
-        <Heading as="h3" variant="section-title">
-          Venue
-        </Heading>
-        <Paragraph>
-          Vavrisovo, Slovakia
-        </Paragraph>
-        <Paragraph>
-          In the middle of nowhere. But it's beautiful there! Trust us!
-        </Paragraph>
+        <Center>
+          <Image
+            borderColor="whiteAlpha.800"
+            borderWidth={2}
+            borderStyle="solid"
+            // maxWidth="100px"
+            display="inline-block"
+            borderRadius="md"
+            src="/images/hena-rado-weds.jpg"
+            alt="Profile image"
+          />
+        </Center>
       </Section>
+
       {/* <Section delay={0.2}>
         <Heading as="h3" variant="section-title">
           Bio

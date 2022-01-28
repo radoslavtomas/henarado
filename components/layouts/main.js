@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import NavBar from '../navbar'
-import { Box, Container } from '@chakra-ui/react'
+import { Box, Container, useColorModeValue } from '@chakra-ui/react'
 import Footer from '../footer'
 import VoxelDogLoader from '../voxel-dog-loader'
 
@@ -28,6 +28,18 @@ const Main = ({ children, router }) => {
 
       <Container maxW="container.md" pt={14}>
         <LazyVoxelDog />
+
+        <Container maxW="container.md">
+          <Box
+            borderRadius="lg"
+            mb={6}
+            p={3}
+            textAlign="center"
+            bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+          >
+            Hena & Rado | 13th August 2022
+          </Box>
+      </Container>
 
         {children}
 

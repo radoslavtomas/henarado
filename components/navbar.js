@@ -15,6 +15,7 @@ import {
   useColorModeValue
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
+import LanguageToggle from './language-toggle'
 import ThemeToggleButton from './theme-toggle-button'
 import { IoLogoGithub } from 'react-icons/io5'
 
@@ -92,15 +93,8 @@ const Navbar = props => {
           </LinkItem> */}
         </Stack>
 
-        <Box flex={1} align="right">
-          <Box>
-          <NextLink href="/" locale="en">
-            <a>En</a>
-          </NextLink>
-          <NextLink href="/" locale="sk">
-            <a>Sk</a>
-          </NextLink>
-          </Box>
+        <Flex flex={1} justifyContent="end" alignItems="center">
+          <LanguageToggle />
           <ThemeToggleButton />
 
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
@@ -133,7 +127,7 @@ const Navbar = props => {
               </MenuList>
             </Menu>
           </Box>
-        </Box>
+        </Flex>
       </Container>
     </Box>
   )

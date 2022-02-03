@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import NextLink from 'next/link'
-import { Box, Image } from '@chakra-ui/react'
+import { Box, Image, Flex } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
 
 const Flag = ({ ...props }) => {
@@ -16,6 +16,7 @@ const Flag = ({ ...props }) => {
     }
 
     return (
+      <Flex>
         <NextLink href="/" locale={lang}>
         <Image
             borderColor="whiteAlpha.800"
@@ -26,9 +27,9 @@ const Flag = ({ ...props }) => {
             borderRadius="md"
             cursor={'pointer'}
             src={`/images/flag_${flag}.png`}
-            alt={desc}
-        />
-        </NextLink>
+            alt={desc} />
+            </NextLink>
+          </Flex>
     )
 }
 

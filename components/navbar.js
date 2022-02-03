@@ -18,6 +18,7 @@ import { HamburgerIcon } from '@chakra-ui/icons'
 import LanguageToggle from './language-toggle'
 import ThemeToggleButton from './theme-toggle-button'
 import { IoLogoGithub } from 'react-icons/io5'
+import { BlendingEquation } from 'three'
 
 const LinkItem = ({ href, path, _target, children, ...props }) => {
   const active = path === href
@@ -25,10 +26,11 @@ const LinkItem = ({ href, path, _target, children, ...props }) => {
   return (
     <NextLink href={href} passHref>
       <Link
-        p={2}
-        bg={active ? 'purple.600' : undefined}
-        color={active ? 'white' : inactiveColor}
-        borderRadius="md"
+        p={1}
+        _hover={{ underline: 'none', color: 'pink.600' }}
+        _focus={{ outline: 'none' }}
+        borderBottom={active ? 'solid' : undefined}
+        borderBottomColor={active ? inactiveColor : undefined}
         _target={_target}
         {...props}
       >
@@ -73,9 +75,9 @@ const Navbar = props => {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
-          {/* <LinkItem href="/more" path={path}>
-            More
-          </LinkItem> */}
+          <LinkItem href="/" path={path}>
+            Home
+          </LinkItem>
           <LinkItem href="/venue" path={path}>
             Venue
           </LinkItem>

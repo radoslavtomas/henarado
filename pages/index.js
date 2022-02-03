@@ -26,27 +26,25 @@ import { useRouter } from 'next/router'
 import { en } from '../locales/en'
 import { sk } from '../locales/sk'
 
-
 const Home = () => {
-
   const { locale } = useRouter()
   const t = locale === 'en' ? en : sk
-  
+
   return (
-  <Layout>
-    <Container maxW="container.md">
-      <Box display={{ md: 'flex' }} mb={6}>
-        <Box flexGrow={1}>
-          <Center>
-            <Heading as="h2" variant="page-title">
-            {t.title}
-            </Heading>
-          </Center>
-          <Center>
-            <p>All the things you (don't) want to know.</p>
-          </Center>
-        </Box>
-        {/* <Box
+    <Layout>
+      <Container maxW="container.md">
+        <Box display={{ md: 'flex' }} mb={6}>
+          <Box flexGrow={1}>
+            <Center>
+              <Heading as="h2" variant="page-title">
+                {t.home.title}
+              </Heading>
+            </Center>
+            <Center>
+              <p>{t.home.desciption}</p>
+            </Center>
+          </Box>
+          {/* <Box
           flexShrink={0}
           mt={{ base: 4, md: 0 }}
           ml={{ md: 6 }}
@@ -63,9 +61,9 @@ const Home = () => {
             alt="Profile image"
           />
         </Box> */}
-      </Box> 
+        </Box>
 
-      {/* <Section delay={0.1}>
+        {/* <Section delay={0.1}>
         <Heading as="h3" variant="section-title">
           Date
         </Heading>
@@ -90,23 +88,22 @@ const Home = () => {
         </Box>
       </Section> */}
 
+        <Section delay={0.1}>
+          <Center>
+            <Image
+              borderColor="whiteAlpha.800"
+              borderWidth={2}
+              borderStyle="solid"
+              // maxWidth="100px"
+              display="inline-block"
+              borderRadius="md"
+              src="/images/hena-rado-weds.jpg"
+              alt="Profile image"
+            />
+          </Center>
+        </Section>
 
-      <Section delay={0.1}>
-        <Center>
-          <Image
-            borderColor="whiteAlpha.800"
-            borderWidth={2}
-            borderStyle="solid"
-            // maxWidth="100px"
-            display="inline-block"
-            borderRadius="md"
-            src="/images/hena-rado-weds.jpg"
-            alt="Profile image"
-          />
-        </Center>
-      </Section>
-
-      {/* <Section delay={0.2}>
+        {/* <Section delay={0.2}>
         <Heading as="h3" variant="section-title">
           Bio
         </Heading>
@@ -223,8 +220,9 @@ const Home = () => {
           </NextLink>
         </Box>
       </Section> */}
-    </Container>
-  </Layout>
-)}
+      </Container>
+    </Layout>
+  )
+}
 
 export default Home

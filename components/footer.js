@@ -1,9 +1,12 @@
-import { Box } from '@chakra-ui/react'
+import { Box, Link } from '@chakra-ui/react'
 
 const Footer = () => {
   return (
-    <Box align="center" opacity={0.4} fontSize="sm">
-      &copy; {new Date().getFullYear()} Hena & Rado | 3D Art - Alfons Serrano Carpinell
+    <Box align="center" opacity={0.6} fontSize="sm">
+      &copy; {new Date().getFullYear()} Hena & Rado | 3D Model -{' '}
+      <Link target="_blank" href="https://etienne2424.wixsite.com/alfie">
+        Alfons Serrano Carpinell
+      </Link>
     </Box>
   )
 }

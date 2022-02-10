@@ -41,7 +41,7 @@ const Home = () => {
               </Heading>
             </Center>
             <Center>
-              <p>{t.home.desciption}</p>
+              <p>{t.home.description}</p>
             </Center>
           </Box>
           {/* <Box

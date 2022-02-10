@@ -29,7 +29,7 @@ const Main = ({ children, router }) => {
       <Container maxW="container.md" pt={14}>
         <LazyVoxelDog />
 
-        <Container maxW="container.md">
+        {/* <Container maxW="container.md">
           <Box
             borderRadius="lg"
             mb={6}
@@ -39,7 +39,7 @@ const Main = ({ children, router }) => {
           >
             Hena & Rado | 13th August 2022
           </Box>
-      </Container>
+        </Container> */}
 
         {children}
 

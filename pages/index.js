@@ -20,11 +20,11 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
 import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
-// import thumbYouTube from '../public/images/links/youtube.png'
-// import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
 import { useRouter } from 'next/router'
 import { en } from '../locales/en'
 import { sk } from '../locales/sk'
+
+import AuthMiddleware from '../components/auth-middleware'
 
 const Home = () => {
   const { locale } = useRouter()
@@ -32,6 +32,7 @@ const Home = () => {
 
   return (
     <Layout>
+      <AuthMiddleware />
       <Container maxW="container.md">
         <Box display={{ md: 'flex' }} mb={6}>
           <Box flexGrow={1}>

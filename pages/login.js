@@ -86,8 +86,8 @@ const Login = () => {
                 {t.login.title}
               </Heading>
             </Center>
-            <Center>
-              <p textAlign="center">{t.login.description}</p>
+            <Center textAlign="center">
+              <p>{t.login.description}</p>
             </Center>
           </Box>
         </Box>

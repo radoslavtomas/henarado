@@ -29,18 +29,6 @@ const Main = ({ children, router }) => {
       <Container maxW="container.md" pt={14}>
         <LazyVoxelDog />
 
-        {/* <Container maxW="container.md">
-          <Box
-            borderRadius="lg"
-            mb={6}
-            p={3}
-            textAlign="center"
-            bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
-          >
-            Hena & Rado | 13th August 2022
-          </Box>
-        </Container> */}
-
         {children}
 
         <Footer />

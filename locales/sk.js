@@ -1,16 +1,25 @@
 export const sk = {
   headline: '13. august 2022',
+  navbar: {
+    home: 'Domov',
+    venue: 'Miesto'
+  },
   home: {
-    title: 'Naša svadba',
-    description: 'Všetko, čo ste chceli vedieť a báli sa opýtať.'
+    title: 'Ideme sa brať! 💞',
+    description:
+      'Vitajte na našej stránke. Dúfame, že to s nami prídete osláviť a už máte poznačený dátum – 13. august.'
   },
   login: {
-    title: 'Prihlásenie',
-    description: 'Prihláste sa, prosím, aby ste mohli pokračovať',
+    title: 'Ideme sa brať! 💞',
+    description: 'Pre viac informácií vložte tekutý kľúč',
     password: 'Heslo',
     login: 'Prihláste sa',
     password_validation: 'Heslo nesmie byť prázdne',
-    auth_error: 'Nesprávne heslo'
+    auth_error: 'Nesprávny kľúč'
+  },
+  venue: {
+    title: 'Miesto',
+    description: 'Vavrišovo, Slovensko | Chata Alpine'
   },
   title: 'Nasa Svadba'
 }

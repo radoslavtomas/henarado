@@ -1,16 +1,25 @@
 export const en = {
   headline: '13th August 2022',
+  navbar: {
+    home: 'Home',
+    venue: 'Venue'
+  },
   home: {
-    title: 'Our Wedding',
-    description: 'All the things you want to know and were afraid to ask.'
+    title: 'We are getting married! 💞',
+    description:
+      'Welcome to our website. Hope you can come to celebrate with us and you have booked the date – 13th August.'
   },
   login: {
-    title: 'Login',
-    description: 'Please, log in to continue',
+    title: 'We are getting married! 💞',
+    description: 'For more information enter the liquid key',
     password: 'Password',
     login: 'Login',
-    password_validation: 'You must enter a password',
-    auth_error: 'Not a valid password'
+    password_validation: 'You must enter a key',
+    auth_error: 'Not a valid key'
+  },
+  venue: {
+    title: 'Venue',
+    description: 'Vavrisovo, Slovakia | Alpine cottage'
   },
   title: 'Our Wedding'
 }

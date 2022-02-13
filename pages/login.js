@@ -6,6 +6,7 @@ import {
   Heading,
   Box,
   Input,
+  Image,
   Button
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
@@ -81,12 +82,12 @@ const Login = () => {
         <Box display={{ md: 'flex' }} mb={6}>
           <Box flexGrow={1}>
             <Center>
-              <Heading as="h2" variant="page-title">
+              <Heading as="h2" variant="page-title" textAlign="center">
                 {t.login.title}
               </Heading>
             </Center>
             <Center>
-              <p>{t.login.description}</p>
+              <p textAlign="center">{t.login.description}</p>
             </Center>
           </Box>
         </Box>
@@ -118,6 +119,21 @@ const Login = () => {
               </Button>
             </form>
           </Box>
+        </Section>
+
+        <Section delay={0.1}>
+          <Center>
+            <Image
+              borderColor="whiteAlpha.800"
+              borderWidth={2}
+              borderStyle="solid"
+              // maxWidth="100px"
+              display="inline-block"
+              borderRadius="md"
+              src="/images/login.jpg"
+              alt="Login picture"
+            />
+          </Center>
         </Section>
       </Container>
     </Layout>

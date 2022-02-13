@@ -20,6 +20,7 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
 import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
+import { Teaser } from '../components/teaser'
 import { useRouter } from 'next/router'
 import { en } from '../locales/en'
 import { sk } from '../locales/sk'
@@ -34,6 +35,7 @@ const Home = () => {
     <Layout>
       <AuthMiddleware />
       <Container maxW="container.md">
+        <Teaser />
         <Box display={{ md: 'flex' }} mb={6}>
           <Box flexGrow={1}>
             <Center>

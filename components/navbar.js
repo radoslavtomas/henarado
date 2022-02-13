@@ -19,6 +19,9 @@ import LanguageToggle from './language-toggle'
 import ThemeToggleButton from './theme-toggle-button'
 import { IoLogoGithub } from 'react-icons/io5'
 import { BlendingEquation } from 'three'
+import { useRouter } from 'next/router'
+import { en } from '../locales/en'
+import { sk } from '../locales/sk'
 
 const LinkItem = ({ href, path, _target, children, ...props }) => {
   const active = path === href
@@ -42,6 +45,8 @@ const LinkItem = ({ href, path, _target, children, ...props }) => {
 
 const Navbar = props => {
   const { path } = props
+  const { locale } = useRouter()
+  const t = locale === 'en' ? en : sk
 
   return (
     <Box
@@ -76,10 +81,10 @@ const Navbar = props => {
           mt={{ base: 4, md: 0 }}
         >
           <LinkItem href="/" path={path}>
-            Home
+            {t.navbar.home}
           </LinkItem>
           <LinkItem href="/venue" path={path}>
-            Venue
+            {t.navbar.venue}
           </LinkItem>
           {/* <LinkItem
             _target="_blank"
@@ -114,8 +119,11 @@ const Navbar = props => {
                 {/* <NextLink href="/more" passHref>
                   <MenuItem as={Link}>More</MenuItem>
                 </NextLink> */}
+                <LinkItem href="/" path={path}>
+                  {t.navbar.home}
+                </LinkItem>
                 <LinkItem href="/venue" path={path}>
-                  Venue
+                  {t.navbar.venue}
                 </LinkItem>
                 {/* <NextLink href="/posts" passHref>
                   <MenuItem as={Link}>Posts</MenuItem>

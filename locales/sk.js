@@ -66,10 +66,10 @@ export const sk = {
   practicalities: {
     title: 'Iné',
     description:
-      'You have probably gathered by now that the wedding - including the ceremony and the dinner - will be outdoors (fingers crossed). The venue is in the middle of nowhere, but we think it’s stunning there + the with the view of the Krivan mountain!!!',
+      'Piatková párty/ sobotný obrad/ hostina budú na chate Alpine vo Vavrišove (pri Liptovskom Hrádku). Je to plus-mínus koniec sveta, ale je tam krásne + výhľad na Kriváň!!!',
     dress: 'Oblečenie',
     dress_desc:
-      'Yep! Still outdoors! So the priorities should be as follows: 1; weatherproof, 2; comfortable, 3; one in which you feel cute 😊. And particularly those of paler complexion – bring sunscreen (yes, Nassim, we are talking about you 😊)!',
+      'Vačšsinu víkendu (s výnimkou spánku - odvážnych a odvážne neobmedzujeme) plánujeme stráviť pod širákom – áno, vrátane obradu, hostiny a zábavy. Takže priority na oblečenie by mali byt nasledovné: 1.) do každého počasia 2.) pohodlne 3.) v ktorom sa cítite atraktívne',
     gethere: 'Doprava',
     gethere_desc:
       'Najjednoduchšie je prísť autom, parkovanie by nemal byť problém priamo na mieste alebo poblízku. Druhou možnosťou je ísť vlakom alebo autobusom do Liptovského Hrádku a odtiaľ najlepšie taxíkom, prípadne prímestkým autobusovým spojom.',

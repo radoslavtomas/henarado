@@ -3,15 +3,14 @@ import dynamic from 'next/dynamic'
 import NavBar from '../navbar'
 import { Box, Container } from '@chakra-ui/react'
 import Footer from '../footer'
-// import VoxelWedLoader from '../voxel-wed-loader'
 import { useRouter } from 'next/router'
 import { en } from '../../locales/en'
 import { sk } from '../../locales/sk'
 
-// const LazyVoxelWed = dynamic(() => import('../voxel-wed'), {
-//   ssr: false,
-//   loading: () => <VoxelWedLoader />
-// })
+const LazyVoxelWed = dynamic(() => import('../voxel-wed'), {
+  ssr: false,
+  loading: () => <VoxelWedLoader />
+})
 
 const Main = ({ children, router }) => {
   const { locale } = useRouter()
@@ -33,8 +32,8 @@ const Main = ({ children, router }) => {
       <NavBar path={router.asPath} t={t} />
 
       <Container maxW="container.md" pt={14}>
-        {/* <LazyVoxelWed /> */}
         {children}
+
         <Footer />
       </Container>
     </Box>

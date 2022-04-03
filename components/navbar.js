@@ -17,9 +17,6 @@ import {
 import { HamburgerIcon } from '@chakra-ui/icons'
 import LanguageToggle from './language-toggle'
 import ThemeToggleButton from './theme-toggle-button'
-import { useRouter } from 'next/router'
-import { en } from '../locales/en'
-import { sk } from '../locales/sk'
 
 const LinkItem = ({ href, path, _target, children, ...props }) => {
   const active = path === href
@@ -41,10 +38,28 @@ const LinkItem = ({ href, path, _target, children, ...props }) => {
   )
 }
 
+const navItemsDestop = items => {
+  return items.map(item => {
+    return (
+      <LinkItem href={item.url} key={item.title}>
+        {item.title}
+      </LinkItem>
+    )
+  })
+}
+
+const navItemsMobile = items => {
+  return items.map(item => {
+    return (
+      <NextLink href={item.url} passHref>
+        <MenuItem as={Link}>{item.title}</MenuItem>
+      </NextLink>
+    )
+  })
+}
+
 const Navbar = props => {
-  const { path } = props
-  const { locale } = useRouter()
-  const t = locale === 'en' ? en : sk
+  const { path, t } = props
 
   return (
     <Box
@@ -78,12 +93,16 @@ const Navbar = props => {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
-          <LinkItem href="/" path={path}>
+          {navItemsDestop(t.navbar)}
+          {/* <LinkItem href="/" path={path}>
             {t.navbar.home}
           </LinkItem>
           <LinkItem href="/venue" path={path}>
             {t.navbar.venue}
           </LinkItem>
+          <LinkItem href="/plan" path={path}>
+            {t.navbar.plan}
+          </LinkItem> */}
         </Stack>
 
         <Flex flex={1} justifyContent="end" alignItems="center">
@@ -99,12 +118,16 @@ const Navbar = props => {
                 aria-label="Options"
               />
               <MenuList>
-                <NextLink href="/" passHref>
+                {navItemsMobile(t.navbar)}
+                {/* <NextLink href="/" passHref>
                   <MenuItem as={Link}>{t.navbar.home}</MenuItem>
                 </NextLink>
                 <NextLink href="/venue" passHref>
                   <MenuItem as={Link}>{t.navbar.venue}</MenuItem>
                 </NextLink>
+                <NextLink href="/plan" passHref>
+                  <MenuItem as={Link}>{t.navbar.plan}</MenuItem>
+                </NextLink> */}
               </MenuList>
             </Menu>
           </Box>

@@ -2,13 +2,13 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { loadGLTFModel } from '../lib/model'
-import { DogSpinner, DogContainer } from './voxel-dog-loader'
+import { WedSpinner, WedContainer } from './voxel-wed-loader'
 
 function easeOutCirc(x) {
   return Math.sqrt(1 - Math.pow(x - 1, 4))
 }
 
-const VoxelDog = () => {
+const VoxelWed = () => {
   const refContainer = useRef()
   const [loading, setLoading] = useState(true)
   const [renderer, setRenderer] = useState()
@@ -16,7 +16,7 @@ const VoxelDog = () => {
   const [target] = useState(new THREE.Vector3(-0.1, 1.3, 0))
   const [initialCameraPosition] = useState(
     new THREE.Vector3(
-      20* Math.sin(0.4 * Math.PI),
+      20 * Math.sin(0.4 * Math.PI),
       10,
       20 * Math.cos(0.2 * Math.PI)
     )
@@ -49,7 +49,6 @@ const VoxelDog = () => {
       renderer.setPixelRatio(window.devicePixelRatio)
       renderer.setSize(scW, scH)
       renderer.outputEncoding = THREE.sRGBEncoding // THREE.sRGBEncoding
-      // renderer.gammaFactor = 1.2;
       container.appendChild(renderer.domElement)
       setRenderer(renderer)
 
@@ -124,8 +123,8 @@ const VoxelDog = () => {
   }, [renderer, handleWindowResize])
 
   return (
-    <DogContainer ref={refContainer}>{loading && <DogSpinner />}</DogContainer>
+    <WedContainer ref={refContainer}>{loading && <WedSpinner />}</WedContainer>
   )
 }
 
-export default VoxelDog
+export default VoxelWed

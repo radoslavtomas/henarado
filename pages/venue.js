@@ -16,7 +16,7 @@ import {
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import { BiMap } from 'react-icons/bi'
 import Paragraph from '../components/paragraph'
-import Layout from '../components/layouts/article'
+import Layout from '../components/layouts/page'
 import Section from '../components/section'
 import { Teaser } from '../components/teaser'
 import AuthMiddleware from '../components/auth-middleware'

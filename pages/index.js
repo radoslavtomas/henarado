@@ -16,7 +16,7 @@ import {
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
-import Layout from '../components/layouts/article'
+import Layout from '../components/layouts/page_simple'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
 import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
@@ -34,18 +34,14 @@ const Home = () => {
   return (
     <Layout>
       <AuthMiddleware />
-      <Container maxW="container.md">
+      <Container maxW="container.md" mt={8}>
         <Teaser />
-        <Box display={{ md: 'flex' }} mb={6}>
-          <Box flexGrow={1}>
-            <Center>
-              <Heading as="h2" variant="page-title">
-                {t.home.title}
-              </Heading>
-            </Center>
-            <Center>
-              <p>{t.home.description}</p>
-            </Center>
+        <Box mb={6}>
+          <Box textAlign="center">
+            <Heading as="h2" variant="page-title">
+              {t.home.title}
+            </Heading>
+            <p>{t.home.description}</p>
           </Box>
           {/* <Box
           flexShrink={0}

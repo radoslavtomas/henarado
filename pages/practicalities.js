@@ -17,7 +17,7 @@ import {
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
-import Layout from '../components/layouts/page_simple'
+import Layout from '../components/layouts/page'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
 import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
@@ -89,6 +89,13 @@ const Program = () => {
             {t.practicalities.gifts}
           </Heading>
           <p>{t.practicalities.gifts_desc}</p>
+        </Section>
+
+        <Section delay={0.1}>
+          <Heading as="h3" variant="section-title">
+            {t.practicalities.questions}
+          </Heading>
+          <p>{t.practicalities.questions_desc}</p>
         </Section>
       </Container>
     </Layout>

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
-import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import { GridItemStyle } from '../grid-item'
+import dynamic from 'next/dynamic'
 import VoxelWedLoader from '../voxel-wed-loader'
 
 const LazyVoxelWed = dynamic(() => import('../voxel-wed'), {
@@ -32,9 +32,8 @@ const Layout = ({ children, title }) => (
           <meta property="og:title" content={title} />
         </Head>
       )}
-      <LazyVoxelWed />
       {children}
-
+      <LazyVoxelWed />
       <GridItemStyle />
     </>
   </motion.article>

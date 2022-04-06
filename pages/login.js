@@ -11,7 +11,7 @@ import {
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 
-import Layout from '../components/layouts/page'
+import Layout from '../components/layouts/page_alt'
 import Section from '../components/section'
 import LoginError from '../components/loginError'
 

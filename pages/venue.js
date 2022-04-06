@@ -42,10 +42,25 @@ const Venue = () => {
             </Center>
             <Center>
               <BiMap />
-              <p>{t.venue.description}</p>
+              <p dangerouslySetInnerHTML={{ __html: t.venue.description }}></p>
             </Center>
           </Box>
         </Box>
+
+        <Section delay={0.1}>
+          <Center>
+            <Image
+              borderColor="whiteAlpha.800"
+              borderWidth={2}
+              borderStyle="solid"
+              // maxWidth="100px"
+              display="inline-block"
+              borderRadius="md"
+              src="/images/chata.jpg"
+              alt="Profile image"
+            />
+          </Center>
+        </Section>
 
         <Section delay={0.1}>
           <Box borderColor="whiteAlpha.800" borderWidth={2} borderStyle="solid">

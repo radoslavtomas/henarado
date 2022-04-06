@@ -1,3 +1,19 @@
 .font-bold {
   font-weight: 600;
 }
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-blue-400 {
+  color: rgb(59 130 246);
+}
+
+.text-blue-400:hover {
+  color: rgb(37 99 235);
+}
+
+.text-pink-500 {
+  color: rgb(236 72 153);
+}

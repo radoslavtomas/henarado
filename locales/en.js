@@ -7,7 +7,7 @@ export const en = {
     },
     {
       title: 'Venue',
-      url: 'venue'
+      url: '/venue'
     },
     {
       title: 'Plan',
@@ -33,12 +33,13 @@ export const en = {
   },
   venue: {
     title: 'Venue',
-    description: 'Vavrisovo, Slovakia | Alpine cottage'
+    description:
+      'Vavrisovo, Slovakia | <a href="https://www.chataalpine.sk/" target="_blank" class="font-bold text-blue-400 hover:text-teal-600">Alpine Cottage</a>'
   },
   plan: {
     title: 'Plan',
     description:
-      'The delightful Alpine cottage is booked from Friday to Sunday (12. – 14.08.). This is the plan:',
+      'The delightful Alpine cottage is booked from Friday to Sunday (12/08 – 14/08). We haven’t seen most of you for a while, and we are hoping to party and enjoy your company for the whole weekend, not just the wedding day. So this is the plan:',
     friday: 'Friday',
     friday_plan: [
       'The cottage is available from 3pm onwards',
@@ -48,9 +49,9 @@ export const en = {
     saturday: 'Saturday',
     saturday_plan: [
       'Sleeping out the last night',
-      'For enthusiasts – table tennis, hinking etc.',
+      'For enthusiasts – table tennis, games, hiking etc.',
       'Some lunch (leftovers from yesterday 😊)',
-      '<span class="font-bold">Wedding ceremony at 3pm</span>',
+      '💕 <span class="font-bold uppercase text-pink-500">Wedding ceremony at 3pm</span> 💕',
       'Toasts',
       'Approx 5.30pm dinner',
       'Wedding cake cutting – and of course eating',
@@ -60,7 +61,7 @@ export const en = {
     sunday_plan: [
       'The bad news - not only has the wedding finished, we have to leave Alpine cottage by 10am (for optimists, at 10am in the morning)',
       'The good news – camp site is nearby',
-      'The best news -  <span class="font-bold">WE ARE MARRIED</span>'
+      'The best news -  <span class="font-bold text-pink-500">WE ARE MARRIED</span>'
     ]
   },
   practicalities: {
@@ -81,7 +82,10 @@ export const en = {
       "We will be in the middle of nowhere, so there will be BBQs, goulash, and not-so-formal dining. The nearest supermarket is a few miles away, so we recommend you bring any 'specific necessities' with you (Marmite, paracetamol, antihistamines…)",
     gifts: 'Gifts',
     gifts_desc:
-      "This is how we see it: we consider ourselves very lucky to have all we need - and then some. So, whilst worrying this might sound like a cliché, we would like to tell you that the greatest gift for us will be your presence at our wedding. And we would be most grateful if you didn't concern yourselves with this at all. If this is hard for you to swallow, then do what you must 😉 However, this is our wish - if you have a few photos, old or not-so-old, related to knowing us, we would be grateful if you would print and bring them over, together with a story or two (not too embarassing, please). Thank you"
+      "This is how we see it: we consider ourselves very lucky to have all we need - and then some. So, whilst worrying this might sound like a cliché, we would like to tell you that the greatest gift for us will be your presence at our wedding. And we would be most grateful if you didn't concern yourselves with this at all. If this is hard for you to swallow, then do what you must 😉 However, this is our wish - if you have a few photos, old or not-so-old, related to knowing us, we would be grateful if you would print and bring them over, together with a story or two (not too embarassing, please). Thank you",
+    questions: 'Questions / Ideas',
+    questions_desc:
+      'If you are unsure about some bits and bobs, and find it hard to leave room for improvisation (or if you have an awesome idea or two), do drop us an email: radoslav.tomas@gmail.com && h.pribulova@hotmail.co.uk.'
   },
   title: 'Our Wedding'
 }

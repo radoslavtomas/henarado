@@ -51,7 +51,7 @@ const navItemsDestop = items => {
 const navItemsMobile = items => {
   return items.map(item => {
     return (
-      <NextLink href={item.url} passHref>
+      <NextLink href={item.url} key={item.title} passHref>
         <MenuItem as={Link}>{item.title}</MenuItem>
       </NextLink>
     )
@@ -60,6 +60,9 @@ const navItemsMobile = items => {
 
 const Navbar = props => {
   const { path, t } = props
+
+  const isNotLoginPage = path !== '/login'
+  console.log(path)
 
   return (
     <Box
@@ -84,17 +87,17 @@ const Navbar = props => {
             <Logo />
           </Heading>
         </Flex>
-
-        <Stack
-          direction={{ base: 'column', md: 'row' }}
-          display={{ base: 'none', md: 'flex' }}
-          width={{ base: 'full', md: 'auto' }}
-          alignItems="center"
-          flexGrow={1}
-          mt={{ base: 4, md: 0 }}
-        >
-          {navItemsDestop(t.navbar)}
-          {/* <LinkItem href="/" path={path}>
+        {isNotLoginPage && (
+          <Stack
+            direction={{ base: 'column', md: 'row' }}
+            display={{ base: 'none', md: 'flex' }}
+            width={{ base: 'full', md: 'auto' }}
+            alignItems="center"
+            flexGrow={1}
+            mt={{ base: 4, md: 0 }}
+          >
+            {navItemsDestop(t.navbar)}
+            {/* <LinkItem href="/" path={path}>
             {t.navbar.home}
           </LinkItem>
           <LinkItem href="/venue" path={path}>
@@ -103,23 +106,24 @@ const Navbar = props => {
           <LinkItem href="/plan" path={path}>
             {t.navbar.plan}
           </LinkItem> */}
-        </Stack>
-
+          </Stack>
+        )}
         <Flex flex={1} justifyContent="end" alignItems="center">
           <LanguageToggle />
           <ThemeToggleButton />
 
-          <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
-            <Menu isLazy id="navbar-menu">
-              <MenuButton
-                as={IconButton}
-                icon={<HamburgerIcon />}
-                variant="outline"
-                aria-label="Options"
-              />
-              <MenuList>
-                {navItemsMobile(t.navbar)}
-                {/* <NextLink href="/" passHref>
+          {isNotLoginPage && (
+            <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
+              <Menu isLazy id="navbar-menu">
+                <MenuButton
+                  as={IconButton}
+                  icon={<HamburgerIcon />}
+                  variant="outline"
+                  aria-label="Options"
+                />
+                <MenuList>
+                  {navItemsMobile(t.navbar)}
+                  {/* <NextLink href="/" passHref>
                   <MenuItem as={Link}>{t.navbar.home}</MenuItem>
                 </NextLink>
                 <NextLink href="/venue" passHref>
@@ -128,9 +132,10 @@ const Navbar = props => {
                 <NextLink href="/plan" passHref>
                   <MenuItem as={Link}>{t.navbar.plan}</MenuItem>
                 </NextLink> */}
-              </MenuList>
-            </Menu>
-          </Box>
+                </MenuList>
+              </Menu>
+            </Box>
+          )}
         </Flex>
       </Container>
     </Box>

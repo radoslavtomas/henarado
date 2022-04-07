@@ -62,7 +62,6 @@ const Navbar = props => {
   const { path, t } = props
 
   const isNotLoginPage = path !== '/login'
-  console.log(path)
 
   return (
     <Box

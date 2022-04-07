@@ -87,5 +87,10 @@ export const sk = {
     questions_desc:
       'Ak vám chýba viac detailov a bojíte sa niečo ponechať náhode (alebo ak máte fantastický nápad či dva), pokojne nám napíšte: radoslav.tomas@gmail.com && h.pribulova@hotmail.co.uk.'
   },
-  title: 'Nasa Svadba'
+  countdown: {
+    d: 'Dni',
+    h: 'Hodiny',
+    m: 'Minúty',
+    s: 'Sekundy'
+  }
 }

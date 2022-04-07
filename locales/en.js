@@ -87,5 +87,10 @@ export const en = {
     questions_desc:
       'If you are unsure about some bits and bobs, and find it hard to leave room for improvisation (or if you have an awesome idea or two), do drop us an email: radoslav.tomas@gmail.com && h.pribulova@hotmail.co.uk.'
   },
-  title: 'Our Wedding'
+  countdown: {
+    d: 'Days',
+    h: 'Hours',
+    m: 'Minutes',
+    s: 'Seconds'
+  }
 }

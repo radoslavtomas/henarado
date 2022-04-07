@@ -108,7 +108,7 @@ const VoxelWed = () => {
       }
 
       return () => {
-        console.log('unmount')
+        // console.log('unmount')
         cancelAnimationFrame(req)
         renderer.dispose()
       }

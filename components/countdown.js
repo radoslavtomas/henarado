@@ -29,7 +29,7 @@ const Countdown = params => {
   useEffect(() => {
     timerID = timer('august 13, 2022 15:00:00')
     return () => {
-      console.log('clearing interval')
+      // console.log('clearing interval')
       clearInterval(timerID)
     }
   }, [])

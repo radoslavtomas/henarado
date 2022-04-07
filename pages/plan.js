@@ -70,7 +70,7 @@ const Program = () => {
           <UnorderedList>{listItems(t.plan.saturday_plan)}</UnorderedList>
         </Section>
 
-        <Section delay={0.1}>
+        <Section delay={0.1} mb={8}>
           <Heading as="h3" variant="section-title">
             {t.plan.sunday}
           </Heading>

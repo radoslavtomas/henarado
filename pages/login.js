@@ -51,7 +51,7 @@ const Login = () => {
 
   const setAuthCookie = () => {
     const pass = hashString(password)
-    console.log(pass)
+    // console.log(pass)
     document.cookie = `authHash=${pass}; SameSite=Lax; MaxAge=${
       60 * 60 * 24 * 30
     } Secure`
@@ -101,7 +101,7 @@ const Login = () => {
                 autoFocus
                 type="password"
                 placeholder={t.login.password}
-                backgroundColor="white"
+                borderColor="blue.300"
                 textAlign="center"
                 value={password}
                 onChange={handlePassword}
